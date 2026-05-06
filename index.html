@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS TECH - Soluções Web e Micro Serviços de TI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Segoe UI', Tahoma, Geneva, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1F4E79 0%, #2d5fa3 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            color: #1F4E79;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #1F4E79;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #2d5fa3;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 20px;
+        }
+        
+        section h2 {
+            font-size: 36px;
+            color: #1F4E79;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .vision-intro {
+            background: white;
+        }
+        
+        .vision-intro p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .services {
+            background: #f9f9f9;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #1F4E79;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .service-card p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .differentials {
+            background: white;
+        }
+        
+        .differentials-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .differential-item {
+            padding: 20px;
+            border-left: 4px solid #1F4E79;
+            background: #f0f4f8;
+            border-radius: 4px;
+        }
+        
+        .differential-item h3 {
+            color: #1F4E79;
+            margin-bottom: 10px;
+        }
+        
+        .differential-item p {
+            color: #666;
+            font-size: 15px;
+        }
+        
+        .methodology {
+            background: #f9f9f9;
+        }
+        
+        .methodology-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .step {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #1F4E79;
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .step h3 {
+            color: #1F4E79;
+            margin-bottom: 10px;
+        }
+        
+        .step p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .next-steps {
+            background: white;
+        }
+        
+        .steps-list {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .steps-list li {
+            background: #f0f4f8;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #F4A43A;
+            list-style: none;
+            color: #555;
+            font-size: 16px;
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, #1F4E79 0%, #2d5fa3 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .conclusion h2 {
+            color: white;
+        }
+        
+        .conclusion p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        footer {
+            background: #0d2847;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            color: #F4A43A;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav a {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">MS TECH</div>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#metodologia">Metodologia</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>Soluções Web para Seu Negócio</h1>
+        <p>MS_TECH: sua parceira em micro serviços de TI, desenvolvimento web e organização de dados</p>
+        <a href="#contato" class="cta-button">Fale Conosco</a>
+    </section>
+    
+    <section class="vision-intro" id="sobre">
+        <div class="container">
+            <h2>Sobre a MS TECH</h2>
+            <p>
+                A MS TECH nasce como uma empresa ágil de micro serviços de TI, focada em criar soluções web para desafios 
+                de software, hardware e organização de dados. Atuamos como um hub de tecnologia prático e acessível, 
+                entregando soluções que resolvem problemas reais.
+            </p>
+            <p>
+                Nossa proposta é ser a parceira dedicada de pequenas empresas e empreendedores que precisam de presença 
+                digital, processos mais claros e suporte técnico sem perder a simplicidade e eficiência.
+            </p>
+        </div>
+    </section>
+    
+    <section class="services" id="servicos">
+        <div class="container">
+            <h2>O que Oferecemos</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Sites, portais e aplicações web desenvolvidas sob medida para o seu negócio, com design funcional e pronto para escalar.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Integração de Dados</h3>
+                    <p>Automação de processos e organização de dados para tornar suas informações mais acessíveis, seguras e bem estruturadas.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Consultoria Técnica</h3>
+                    <p>Apoio em infraestrutura, hardware/software e organização digital para empresas que estão começando sua transformação tecnológica.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Design e UX</h3>
+                    <p>Interfaces intuitivas e visualmente profissionais que melhoram a experiência do usuário e reforçam sua marca.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="differentials" id="diferenciais">
+        <div class="container">
+            <h2>Por que Escolher a MS TECH?</h2>
+            <div class="differentials-list">
+                <div class="differential-item">
+                    <h3>Simplicidade</h3>
+                    <p>Abordagem profissional mas acessível, ideal para quem está em fase de estruturação digital.</p>
+                </div>
+                <div class="differential-item">
+                    <h3>Agilidade</h3>
+                    <p>Entregas rápidas e escaláveis com foco em resolver problemas reais do seu negócio.</p>
+                </div>
+                <div class="differential-item">
+                    <h3>Flexibilidade</h3>
+                    <p>Suporte integrado para web, software, hardware e dados, tudo em um único ponto de contato.</p>
+                </div>
+                <div class="differential-item">
+                    <h3>Parceria</h3>
+                    <p>Crescemos junto com você, oferecendo qualidade mesmo com uma equipe enxuta e dedicada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="methodology" id="metodologia">
+        <div class="container">
+            <h2>Nossa Metodologia</h2>
+            <div class="methodology-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Diagnóstico</h3>
+                    <p>Entendemos suas necessidades, recursos e prioridades em detalhes.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Proposta</h3>
+                    <p>Definimos escopo web integrado a apoio em hardware e dados.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Desenvolvimento</h3>
+                    <p>Criamos site, integrações e estrutura de dados com qualidade.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Testes</h3>
+                    <p>Validamos funcionamento e ajustamos antes de publicar.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Acompanhamento</h3>
+                    <p>Manutenção, otimizações e evoluções futuras contínuas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="next-steps" id="contato">
+        <div class="container">
+            <h2>Próximos Passos</h2>
+            <ul class="steps-list">
+                <li><strong>Reunião de Alinhamento:</strong> Definimos público-alvo, primeiro projeto e escopo inicial.</li>
+                <li><strong>Escopo do Site:</strong> Elaboramos o site de apresentação da MS_TECH e captação de leads.</li>
+                <li><strong>Cronograma e Investimento:</strong> Definimos prazos e investimento para o MVP digital.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="conclusion">
+        <div class="container">
+            <h2>Conclusão</h2>
+            <p>
+                A MS TECH une a visão de uma empresa web-first com a capacidade prática de resolver problemas de tecnologia e organização de dados.
+            </p>
+            <p>
+                Somos a parceira ideal para pequenos negócios que precisam de presença digital, processos mais claros e suporte técnico 
+                sem perder a simplicidade e eficiência.
+            </p>
+            <p style="margin-top: 30px; font-size: 24px; font-weight: bold;">
+                Vamos transformar sua ideia em realidade digital? Entre em contato conosco!
+            </p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 MS TECH - Micro Serviços de TI</p>
+        <p>Desenvolvimento Web | Consultoria Técnica | Organização de Dados</p>
+        <div class="footer-links">
+            <a href="mathenrique0905@gmail.com">mathenrique0905@gmail.com</a>
+            <a href="tel:+5511989389074">(11) 98938-9074</a>
+        </div>
+    </footer>
+</body>
+</html>
