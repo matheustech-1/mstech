@@ -149,6 +149,35 @@
             font-size: 16px;
         }
         
+        .collaborators {
+            background: #ffffff;
+        }
+        
+        .collaborators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+        
+        .collaborator-card {
+            background: #f0f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .collaborator-card h3 {
+            color: #1F4E79;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        
+        .collaborator-card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
         .differentials {
             background: white;
         }
@@ -316,6 +345,7 @@
             <nav>
                 <a href="#sobre">Sobre</a>
                 <a href="#servicos">Serviços</a>
+                <a href="#colaboradores">Colaboradores</a>
                 <a href="#diferenciais">Diferenciais</a>
                 <a href="#metodologia">Metodologia</a>
                 <a href="#contato">Contato</a>
@@ -324,8 +354,8 @@
     </header>
     
     <section class="hero">
-        <h1>Soluções Web para Seu Negócio</h1>
-        <p>MS TECH: sua parceira em micro serviços de TI, desenvolvimento web e organização de dados</p>
+        <h1>Soluções Web que Transformam Seu Negócio</h1>
+        <p>MS TECH é a parceira ideal em micro serviços de TI, desenvolvimento web e organização de dados, com foco em projetos práticos e resultados rápidos.</p>
         <a href="#contato" class="cta-button">Fale Conosco</a>
     </section>
     
@@ -333,13 +363,13 @@
         <div class="container">
             <h2>Sobre a MS TECH</h2>
             <p>
-                A MS TECH nasce como uma empresa ágil de micro serviços de TI, focada em criar soluções web para desafios 
-                de software, hardware e organização de dados. Atuamos como um hub de tecnologia prático e acessível, 
-                entregando soluções que resolvem problemas reais.
+                A MS TECH nasce como uma empresa ágil de micro serviços de TI, focada em soluções web que atendem 
+                às necessidades de software, hardware e organização de dados. Atuamos como um hub de tecnologia 
+                prático, acessível e orientado a resultados.
             </p>
             <p>
-                Nossa proposta é ser a parceira dedicada de pequenas empresas e empreendedores que precisam de presença 
-                digital, processos mais claros e suporte técnico sem perder a simplicidade e eficiência.
+                Nosso objetivo é ser a parceira de pequenas empresas e empreendedores que desejam presença digital 
+                profissional, processos digitais mais eficientes e suporte técnico confiável.
             </p>
         </div>
     </section>
@@ -350,19 +380,43 @@
             <div class="services-grid">
                 <div class="service-card">
                     <h3>Desenvolvimento Web</h3>
-                    <p>Sites, portais e aplicações web desenvolvidas sob medida para o seu negócio, com design funcional e pronto para escalar.</p>
+                    <p>Construímos sites, portais e aplicações web sob medida, com design funcional, desempenho e facilidade de expansão.</p>
                 </div>
                 <div class="service-card">
                     <h3>Integração de Dados</h3>
-                    <p>Automação de processos e organização de dados para tornar suas informações mais acessíveis, seguras e bem estruturadas.</p>
+                    <p>Organizamos informações e automatizamos rotinas para tornar seus dados mais utilizáveis e confiáveis.</p>
                 </div>
                 <div class="service-card">
                     <h3>Consultoria Técnica</h3>
-                    <p>Apoio em infraestrutura, hardware/software e organização digital para empresas que estão começando sua transformação tecnológica.</p>
+                    <p>Orientação em infraestrutura, hardware e software para suportar o crescimento digital do seu negócio.</p>
                 </div>
                 <div class="service-card">
                     <h3>Design e UX</h3>
-                    <p>Interfaces intuitivas e visualmente profissionais que melhoram a experiência do usuário e reforçam sua marca.</p>
+                    <p>Criamos experiências digitais claras e profissionais que ajudam seu público a conectar com a sua marca.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="collaborators" id="colaboradores">
+        <div class="container">
+            <h2>Nossos Colaboradores</h2>
+            <div class="collaborators-grid">
+                <div class="collaborator-card">
+                    <h3>Equipe Web</h3>
+                    <p>Profissionais dedicados a criar sites e aplicações responsivas, com foco em usabilidade e resultados reais.</p>
+                </div>
+                <div class="collaborator-card">
+                    <h3>Consultoria Técnica</h3>
+                    <p>Especialistas em infraestrutura e software, garantindo que sua solução digital funcione com estabilidade.</p>
+                </div>
+                <div class="collaborator-card">
+                    <h3>Dados e Automação</h3>
+                    <p>Analistas que transformam dados em processos eficientes, otimizando tempo e melhorando a tomada de decisão.</p>
+                </div>
+                <div class="collaborator-card">
+                    <h3>Suporte e Atendimento</h3>
+                    <p>Equipe pronta para atender com rapidez, resolver dúvidas e manter o cliente atualizado durante o projeto.</p>
                 </div>
             </div>
         </div>
@@ -374,19 +428,19 @@
             <div class="differentials-list">
                 <div class="differential-item">
                     <h3>Simplicidade</h3>
-                    <p>Abordagem profissional mas acessível, ideal para quem está em fase de estruturação digital.</p>
+                    <p>Processos claros e entregas objetivas, facilitando a jornada de clientes que estão iniciando sua transformação digital.</p>
                 </div>
                 <div class="differential-item">
                     <h3>Agilidade</h3>
-                    <p>Entregas rápidas e escaláveis com foco em resolver problemas reais do seu negócio.</p>
+                    <p>Projetos planejados para avançar rapidamente sem perder qualidade ou controle.</p>
                 </div>
                 <div class="differential-item">
                     <h3>Flexibilidade</h3>
-                    <p>Suporte integrado para web, software, hardware e dados, tudo em um único ponto de contato.</p>
+                    <p>Assistência em web, software, hardware e dados, com abordagem adaptável às necessidades do cliente.</p>
                 </div>
                 <div class="differential-item">
                     <h3>Parceria</h3>
-                    <p>Crescemos junto com você, oferecendo qualidade mesmo com uma equipe enxuta e dedicada.</p>
+                    <p>Atendimento comprometido com o crescimento do cliente, mesmo com equipe enxuta e dedicada.</p>
                 </div>
             </div>
         </div>
@@ -399,27 +453,27 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Diagnóstico</h3>
-                    <p>Entendemos suas necessidades, recursos e prioridades em detalhes.</p>
+                    <p>Mapeamos suas necessidades, recursos e prioridades para uma solução eficiente e realista.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Proposta</h3>
-                    <p>Definimos escopo web integrado a apoio em hardware e dados.</p>
+                    <p>Apresentamos o escopo do projeto incluindo web, dados e suporte técnico.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Desenvolvimento</h3>
-                    <p>Criamos site, integrações e estrutura de dados com qualidade.</p>
+                    <p>Executamos a criação do site, integrações e estrutura de dados com foco em usabilidade.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
                     <h3>Testes</h3>
-                    <p>Validamos funcionamento e ajustamos antes de publicar.</p>
+                    <p>Verificamos cada etapa e ajustamos os detalhes antes de colocar no ar.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">5</div>
                     <h3>Acompanhamento</h3>
-                    <p>Manutenção, otimizações e evoluções futuras contínuas.</p>
+                    <p>Oferecemos manutenção contínua, otimizações e suporte para o crescimento do projeto.</p>
                 </div>
             </div>
         </div>
@@ -440,11 +494,10 @@
         <div class="container">
             <h2>Conclusão</h2>
             <p>
-                A MS TECH une a visão de uma empresa web-first com a capacidade prática de resolver problemas de tecnologia e organização de dados.
+                A MS TECH combina uma abordagem web-first com a experiência prática para resolver desafios de tecnologia, infraestrutura e organização de dados.
             </p>
             <p>
-                Somos a parceira ideal para pequenos negócios que precisam de presença digital, processos mais claros e suporte técnico 
-                sem perder a simplicidade e eficiência.
+                Somos a parceira estratégica para pequenos negócios que precisam de presença digital, processos mais eficientes e suporte técnico confiável.
             </p>
             <p style="margin-top: 30px; font-size: 24px; font-weight: bold;">
                 Vamos transformar sua ideia em realidade digital? Entre em contato conosco!
@@ -456,7 +509,7 @@
         <p>&copy; 2026 MS TECH - Micro Serviços de TI</p>
         <p>Desenvolvimento Web | Consultoria Técnica | Organização de Dados</p>
         <div class="footer-links">
-            <a href="mathenrique0905@gmail.com">mathenrique0905@gmail.com</a>
+            <a href="mailto:mathenrique0905@gmail.com">mathenrique0905@gmail.com</a>
             <a href="tel:+5511989389074">(11) 98938-9074</a>
         </div>
     </footer>
